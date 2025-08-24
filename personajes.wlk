@@ -2,6 +2,7 @@ import objetos.*
 
 object floki { //guerrero
     var arma = ballesta
+    method id() = 1 
     method cambiarArma(unaArma){
         arma = unaArma
     }
@@ -16,6 +17,7 @@ object floki { //guerrero
 object mario { //trabajador
     var valorRecolectado = 0
     var ultimoElemento = null
+    method id() = 2 
     method encontrar(elemento) {
         elemento.recibeTrabajo()
         valorRecolectado = valorRecolectado + elemento.valor()

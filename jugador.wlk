@@ -11,11 +11,16 @@ Cuando le llega este mensaje, `luisa` le dice a su personaje activo que encuentr
 Luisa no nace con ningún personaje activo, hay que asignarle uno.*/
 
 object luisa {
-  var personajeActivo = mario
+  var personajeActivo = noHayPersonaje.id()
+
   method cambiarPersonajeActivo(personajeNuevo) {
     personajeActivo = personajeNuevo
   }
   method aparece(elemento){
     personajeActivo.encuentra(elemento)
   }
+}
+
+object noHayPersonaje {
+  method id() = 0
 }
